@@ -48,4 +48,10 @@ searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value);
 });
 
-checkWeather("goa");
+searchBox.addEventListener("keypress", (event)=>{
+    if(event.key=="Enter"){
+        checkWeather(searchBox.value);
+    }
+});
+
+checkWeather("");
